@@ -1,6 +1,5 @@
 {
-  "name": "Pathfinding",
-  "type": "3d",
+  "name": "pathfinding",
   "uuid": "db226abc-5da4-4b7e-a4bc-ac23ed9d4745",
   "version": "3.3.1",
   "creator": {
