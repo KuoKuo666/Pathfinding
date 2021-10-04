@@ -1,7 +1,7 @@
 import { v2, v3, Vec2 } from "cc"
 import { ElementType, MapData } from "./MapRoot"
 
-class AStarObj {
+export class AStarObj {
     x: number = 0
     y: number = 0
     g: number = 0
