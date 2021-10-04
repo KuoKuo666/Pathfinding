@@ -16,10 +16,16 @@ export class GameRoot extends Component {
     start () {
         this.scheduleOnce(() => {
             const mapRoot = this.mapRoot
-            const mapData: MapData = mapRoot.mapJson.json[mapRoot.mapIndex]
-            // a 星寻路结果，让 boy 走一波
-            const result = Util.aStarPathFind(mapData)
-            this.goAstarPath(result, 0)
+            // 根据地图数据区分下两个场景 one two
+            const mapIndex = mapRoot.mapIndex
+            const mapData: MapData = mapRoot.mapJson.json[mapIndex]
+            if (mapIndex === 0) {
+                // a 星寻路结果，让 boy 走一波，对应不带钥匙，门 的 one 场景
+                const result = Util.aStarPathFind(mapData)
+                this.goAstarPath(result, 0)
+            } else {
+                // 修改的 a 星，去寻找钥匙，对应 two 场景
+            }
         }, 1)
     }
 
